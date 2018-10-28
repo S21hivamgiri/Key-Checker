@@ -1,0 +1,259 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Key Checker</title>
+<script type="text/javascript" language="JavaScript" src="./Key_Checker/jquery.min.js"></script>
+<script type="text/javascript" language="JavaScript" src="./Key_Checker/test.js"></script>
+<link rel="stylesheet" type="text/css" href="./Key_Checker/key-checker.css">
+<style type="text/css">
+
+h1.jj{
+
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-name: example;
+}
+@keyframes example
+{
+	0%{
+	color: black;
+	text-shadow: 5px 10px 12px purple , 0 0 25px green ;
+	}
+	25%{
+	color: silver;	text-shadow: black;
+	}
+	50%{
+	color: black;
+	text-shadow: 5px 10px 12px purple , 0 0 25px green ;
+	}
+	75%{
+	color: silver;
+	text-shadow: black;	
+	}
+	100%{
+	color: black;
+	text-shadow: 5px 10px 12px purple , 0 0 25px green ;
+	}
+}
+	html,
+body {
+text-align:center;
+}
+</style></head>
+<body>
+ <b><center><h1 class="jj">KEY CHECKER</h1></b></center>
+<div id="resetbutton">
+
+<textarea id="testarea" cols="137" rows="4" placeholder="Place the cursor here and begin testing" autofocus>
+</textarea> 
+</div>
+
+
+<table align="center" id="keyboard" class="disableEvent">
+<tbody><tr class="key_small"><td><div class="key_row">
+<div id="key27" class="key_pressed">Esc</div>
+<div id="key112" class="key_pressed">F1</div>
+<div id="key113" class="key_pressed">F2</div>
+<div id="key114" class="key_pressed">F3</div>
+<div id="key115" class="key_pressed">F4</div>
+<div id="key116" class="key_pressed">F5</div>
+
+<div id="key117" class="key_pressed">F6</div>
+<div id="key118" class="key_pressed">F7</div>
+<div id="key119" class="key_pressed">F8</div>
+<div id="key120" class="key_pressed">F9</div>
+<div id="key121" class="key_pressed">F10</div>
+<div id="key122" class="key_pressed">F11</div>
+<div id="key123" class="key_pressed">F12</div>
+</div>
+
+</td><td><div class="key_row"><div id="key44" class="key_pressed">Prnt<br>Scrn</div>
+
+<div id="key145" class="key_pressed">Scroll<br>Lock</div>
+<div id="key19" class="key_pressed"><br>Pause</div>
+</div>
+
+</td>
+
+<td><div class="key_row">
+<div id="key175" class="key_pressed">&#128266;</div>
+
+<div id="key173" class="key_pressed">🔈</div>
+<div id="key174" class="key_pressed">&#128265;</div>
+<div id="key177" class="key_pressed">⏮</div>
+<div id="key179" class="key_pressed">⏯️</div>
+<div id="key176" class="key_pressed">⏭</div>
+</div>
+
+</td></tr>
+
+<tr><td rowspan="2">
+<div class="key_alpha">
+<div class="key_row"><div id="key192" class="key_pressed">~</div>
+<div id="key49" class="key_pressed">1</div>
+<div id="key50" class="key_pressed">2</div>
+<div id="key51" class="key_pressed">3</div>
+<div id="key52" class="key_pressed">4</div>
+<div id="key53" class="key_pressed">5</div>
+
+<div id="key54" class="key_pressed">6</div>
+<div id="key55" class="key_pressed">7</div>
+<div id="key56" class="key_pressed">8</div>
+<div id="key57" class="key_pressed">9</div>
+<div id="key48" class="key_pressed">0</div>
+<div id="key189" class="key_pressed">-</div>
+<div id="key61" class="key_pressed">+</div>
+<div id="key8" class="key_pressed">Bckspc&nbsp; ⟵</div>
+</div>
+
+<div class="key_row"><div id="key9" class="key_pressed">&nbsp;&nbsp;Tab&nbsp;&nbsp;&nbsp;</div>
+<div id="key81" class="key_pressed">Q</div>
+<div id="key87" class="key_pressed">W</div>
+<div id="key69" class="key_pressed">E</div>
+<div id="key82" class="key_pressed">R</div>
+<div id="key84" class="key_pressed">T</div>
+<div id="key89" class="key_pressed">Y</div>
+<div id="key85" class="key_pressed">U</div>
+
+<div id="key73" class="key_pressed">I</div>
+<div id="key79" class="key_pressed">O</div>
+<div id="key80" class="key_pressed">P</div>
+<div id="key219" class="key_pressed">{</div>
+<div id="key221" class="key_pressed">}</div>
+<div id="key220" class="key_pressed">\&nbsp;&nbsp;</div>
+</div>
+
+<div class="key_row"><div id="key20" class="key_pressed">&nbsp;&nbsp;CAPS&nbsp;</div>
+<div id="key65" class="key_pressed">A</div>
+
+<div id="key83" class="key_pressed">S</div>
+<div id="key68" class="key_pressed">D</div>
+<div id="key70" class="key_pressed">F</div>
+<div id="key71" class="key_pressed">G</div>
+<div id="key72" class="key_pressed">H</div>
+<div id="key74" class="key_pressed">J</div>
+<div id="key75" class="key_pressed">K</div>
+<div id="key76" class="key_pressed">L</div>
+<div id="keycolon" class="key_pressed">;</div>
+
+<div id="key222" class="key_pressed">'</div>
+<div id="key13" class="key_pressed_m">Enter &nbsp;↵&nbsp;</div>
+</div>
+
+<div class="key_row">
+<div id="key16" class="key_pressed_m">&nbsp;&nbsp;Shift&nbsp;&nbsp;&nbsp;</div>
+<div id="key90" class="key_pressed">Z</div>
+<div id="key88" class="key_pressed">X</div>
+<div id="key67" class="key_pressed">C</div>
+<div id="key86" class="key_pressed">V</div>
+<div id="key66" class="key_pressed">B</div>
+<div id="key78" class="key_pressed">N</div>
+<div id="key77" class="key_pressed">M</div>
+<div id="key188" class="key_pressed">,</div>
+<div id="key190" class="key_pressed">.</div>
+<div id="key191" class="key_pressed">/</div>
+<div id="key16b" class="key_pressed_m">&nbsp;&nbsp;&nbsp;Shift&nbsp;&nbsp;&nbsp;</div>
+</div>
+
+
+<div class="key_row"><div id="key17" class="key_pressed_m">&nbsp;&nbsp;Ctrl&nbsp;&nbsp;</div>
+
+<div id="key91" class="key_pressed">Win</div>
+<div id="key18" class="key_pressed_m">Alt</div>
+
+<div id="key32" class="key_pressed">&nbsp;&nbsp;&nbsp;&nbsp;Spacebar&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+
+<div id="key18b" class="key_pressed_m">Alt</div>
+<div id="key92" class="key_pressed">Win</div>
+<div id="key93" class="key_pressed">Sel</div>
+
+<div id="key17b" class="key_pressed_m">&nbsp;&nbsp;Ctrl&nbsp;&nbsp;</div>
+</div>
+
+</td>
+</div>
+
+<td class="key_small"><div class="key_row"><div id="key45" class="key_pressed">Insert</div>
+<div id="key36" class="key_pressed">Home</div>
+
+<div id="key33" class="key_pressed">PgUp&nbsp;</div>
+</div>
+
+<div class="key_row"><div id="key46" class="key_pressed">Delete</div>
+<div id="key35" class="key_pressed">End&nbsp;</div>
+<div id="key34" class="key_pressed">PgDwn</div>
+</div>
+
+</td><td rowspan="2">
+<table class="key_block">
+<tbody>
+<tr>
+<td id="key144" class="key_small key_pressed">Num<br>Lck</td>
+<td id="key111" class="key_pressed"><br>&nbsp;/</td>
+<td id="key106" class="key_pressed"><br>&nbsp;*</td>
+
+<td id="key109" class="key_pressed">&nbsp;_&nbsp;</td>
+</tr>
+
+<tr><td id="key103" class="key_pressed">&nbsp;7&nbsp;</td>
+<td id="key104" class="key_pressed">&nbsp;8&nbsp;</td>
+<td id="key105" class="key_pressed">&nbsp;9&nbsp;</td>
+<td id="key107" class="key_pressed" rowspan="2"><br>&nbsp;+&nbsp;</td>
+</tr>
+
+<tr><td id="key100" class="key_pressed">&nbsp;4&nbsp;</td>
+<td id="key101" class="key_pressed">&nbsp;5&nbsp;</td>
+<td id="key102" class="key_pressed">&nbsp;6&nbsp;</td>
+</tr>
+
+<tr><td id="key97" class="key_pressed">&nbsp;1&nbsp;</td>
+<td id="key98" class="key_pressed">&nbsp;2&nbsp;</td>
+<td id="key99" class="key_pressed">&nbsp;3&nbsp;</td>
+<td id="key13b" class=" key_pressed_m" rowspan="2"><br>Entr<br>&nbsp;↵&nbsp;</td>
+</tr>
+
+<tr><td id="key96" class="key_pressed" colspan="2">&nbsp;&nbsp;0</td>
+<td id="key110" class="key_pressed">&nbsp;.</td>
+</tr>
+</tbody>
+</table>
+
+</td></tr>
+<tr><td align="center">
+<table class="key_block">
+<tbody><tr>
+<td class="blank">&nbsp;</td>
+<td id="key38" class="key_pressed">↑</td>
+<td class="blank">&nbsp;</td>
+</tr>
+
+<tr>
+<td id="key37" class="key_pressed">←</td>
+<td id="key40" class="key_pressed">↓</td>
+<td id="key39" class="key_pressed">→</td>
+</tr>
+</tbody></table>
+</td></tr>
+</tbody>
+</table><br>
+<div  style="padding-left:85px;" align="left"> 
+<table  id="keyboar"align="center"><tr><td> <label>Last Key Pressed:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td><tr></tr><td align="center"><label class="last" id="last"></label></td></tr>
+<tr><td> <label>Key Code:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label></td><tr></tr><td align="center"><label class="keycode" id="keycode"></label></td></tr>
+</table></div>
+
+<div class="notebox" align="left">
+<label style="font-family:'Comic Sans MS', cursive, sans-serif;"><big><strong>Note:</strong></big></label><br>
+</div>
+<div id="note" align="left">
+<p style="padding-left:190px">
+*Only for windows/linux user <br>
+*To test numeric keypad be sure Num Lock is ON.<br>
+*The Fn key does not have a scan code.<br>
+*Best Performance in Google Chrome/Microsoft Edge<br>
+*Tester cannot differentiate between bi-occuring keys in keyboard(Shift, Ctrl, Alt, Enter). Be sure to test both of each keys.
+<br></p>
+<div align="center" style="background:silver"><hr><p><center><b>made with <span style="color:red"}>&#x2764;</span> by <span style="color:black"><strong><big> SHIVAM KUMAR GIRI </big></strong></span ><span style="color:red">|<b> National Institute of Technology,Puducherry </b></span></center></p>
+<hr></div>
+</div></body>
+</html>
